@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navServices: "Serviços",
             navProjects: "Projetos",
             navStack: "Stack",
+            navBlog: "Blog",
             navContact: "Contato",
             homeGreeting: "Olá, eu sou",
             typingTitles: ["Engenheiro de Software", "Engenheiro de Inteligência Artificial", "Engenheiro de Machine Learning"],
@@ -24,10 +25,10 @@ document.addEventListener('DOMContentLoaded', function () {
             service4Title: "Desenvolvimento de SaaS",
             service4Desc: "Criação de plataformas Software as a Service escaláveis e multitenant.",
             projectsTitle: "Projetos",
-            project1Title: "CodeScale",
-            project1Desc: "Landing Page para CodeScale",
-            project2Title: "CodeScale",
-            project2Desc: "Landing Page para CodeScale",
+            project1Title: "Nome do Projeto 1",
+            project1Desc: "Breve descrição do projeto, as tecnologias utilizadas e o desafio que ele resolveu.",
+            project2Title: "Nome do Projeto 2",
+            project2Desc: "Breve descrição do projeto, as tecnologias utilizadas e o desafio que ele resolveu.",
             stackTitle: "Minha Stack",
             stackCat1: "Linguagens",
             stackCat2: "Bancos de Dados",
@@ -38,11 +39,12 @@ document.addEventListener('DOMContentLoaded', function () {
             contactSubtitle: "Tem uma ideia ou um projeto em mente? Vamos conversar!",
         },
         en: {
-            pageTitle: "Mateus Araújo - Software Engineer",
+            pageTitle: "Your Name - Software Engineer",
             navAbout: "About",
             navServices: "Services",
             navProjects: "Projects",
             navStack: "Stack",
+            navBlog: "Blog",
             navContact: "Contact",
             homeGreeting: "Hello, I'm",
             typingTitles: ["Software Engineer", "Artificial Intelligence Engineer", "Machine Learning Engineer"],
@@ -61,10 +63,10 @@ document.addEventListener('DOMContentLoaded', function () {
             service4Title: "SaaS Development",
             service4Desc: "Creation of scalable and multi-tenant Software as a Service platforms.",
             projectsTitle: "Projects",
-            project1Title: "CodeScale",
-            project1Desc: "Landing Page for CodeScale",
-            project2Title: "CodeScale",
-            project2Desc: "Landing Page for CodeScale",
+            project1Title: "Project Name 1",
+            project1Desc: "Brief description of the project, the technologies used, and the challenge it solved.",
+            project2Title: "Project Name 2",
+            project2Desc: "Brief description of the project, the technologies used, and the challenge it solved.",
             stackTitle: "My Stack",
             stackCat1: "Languages",
             stackCat2: "Databases",
@@ -88,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 elem.innerText = translations[lang][key];
             }
         });
-            document.querySelectorAll('[data-key-placeholder]').forEach(elem => {
+        document.querySelectorAll('[data-key-placeholder]').forEach(elem => {
             const key = elem.getAttribute('data-key-placeholder');
             if (translations[lang][key]) {
                 elem.placeholder = translations[lang][key];
@@ -148,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle.querySelector('i');
-
+            
     const applyTheme = (theme) => {
         if (theme === 'dark') {
             document.documentElement.classList.add('dark');
@@ -177,6 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
         dark: { particles: { number: { value: 80 }, color: { value: "#555555" }, line_linked: { color: "#555555", opacity: 0.2 } } },
         light: { particles: { number: { value: 80 }, color: { value: "#aaaaaa" }, line_linked: { color: "#aaaaaa", opacity: 0.4 } } }
     };
+
     Object.assign(particlesConfig.dark, { "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#555" }, "shape": { "type": "circle" }, "opacity": { "value": 0.5, "random": true }, "size": { "value": 2, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#555", "opacity": 0.2, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }, "modes": { "grab": { "distance": 140, "line_opacity": 0.5 } } }, "retina_detect": true });
     Object.assign(particlesConfig.light, { "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#aaaaaa" }, "shape": { "type": "circle" }, "opacity": { "value": 0.5, "random": true }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#aaaaaa", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 1, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false } }, "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": false }, "resize": true }, "modes": { "grab": { "distance": 140, "line_opacity": 0.5 } } }, "retina_detect": true });
 
@@ -191,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
+            
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
@@ -200,11 +203,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.section');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            mobileMenu.classList.add('hidden');
-            const targetSection = document.querySelector(this.getAttribute('href'));
-            if (targetSection) {
-                window.scrollTo({ top: targetSection.offsetTop - 60, behavior: 'smooth' });
+            const href = this.getAttribute('href');
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                mobileMenu.classList.add('hidden');
+                const targetSection = document.querySelector(href);
+                if (targetSection) {
+                    window.scrollTo({ top: targetSection.offsetTop - 60, behavior: 'smooth' });
+                }
+            } else {
+                mobileMenu.classList.add('hidden');
             }
         });
     });
@@ -213,7 +221,9 @@ document.addEventListener('DOMContentLoaded', function () {
             if (entry.isIntersecting) {
                 const sectionId = entry.target.id;
                 navLinks.forEach(link => {
-                    link.classList.toggle('active', link.getAttribute('href').substring(1) === sectionId);
+                    if (link.getAttribute('href').startsWith('#')) {
+                        link.classList.toggle('active', link.getAttribute('href').substring(1) === sectionId);
+                    }
                 });
             }
         });
