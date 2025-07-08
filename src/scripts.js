@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             contactSubtitle: "Tem uma ideia ou um projeto em mente? Vamos conversar!",
         },
         en: {
-            pageTitle: "Your Name - Software Engineer",
+            pageTitle: "Mateus Araújo - Software Engineer",
             navAbout: "About",
             navServices: "Services",
             navProjects: "Projects",
