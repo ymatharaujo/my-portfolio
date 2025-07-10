@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
         <!-- Swiper.js CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="./styles.css" />
+        <script type="module" src="/src/main.js"></script>
     </head>
     <body>
 
@@ -26,7 +26,7 @@
                             <li><a href="#about" class="nav-link whitespace-nowrap" data-key="navAbout">Sobre mim</a></li>
                             <li><a href="#services" class="nav-link whitespace-nowrap" data-key="navServices">Serviços</a></li>
                             <li><a href="#stack" class="nav-link whitespace-nowrap" data-key="navStack">Stack</a></li>
-                            <!-- <li><a href="#projects" class="nav-link whitespace-nowrap" data-key="navProjects">Projetos</a></li> -->
+                            <li><a href="#projects" class="nav-link whitespace-nowrap" data-key="navProjects">Projetos</a></li>
                             <li><a href="#contact" class="nav-link whitespace-nowrap" data-key="navContact">Contato</a></li>
                             <li><a href="https://medium.com/@ymathsilvaa20/" target="_blank" rel="noopener noreferrer" class="nav-link whitespace-nowrap" data-key="navBlog">Blog</a></li>
                         </ul>
@@ -49,7 +49,7 @@
                     <li><a href="#about" class="nav-link block py-3 text-center" data-key="navAbout">Sobre mim</a></li>
                     <li><a href="#services" class="nav-link block py-3 text-center" data-key="navServices">Serviços</a></li>
                     <li><a href="#stack" class="nav-link block py-3 text-center" data-key="navStack">Stack</a></li>
-                    <!-- <li><a href="#projects" class="nav-link block py-3 text-center" data-key="navProjects">Projetos</a></li> -->
+                    <li><a href="#projects" class="nav-link block py-3 text-center" data-key="navProjects">Projetos</a></li>
                     <li><a href="#contact" class="nav-link block py-3 text-center" data-key="navContact">Contato</a></li>
                     <li><a href="https://medium.com/@ymathsilvaa20/" target="_blank" rel="noopener noreferrer" class="nav-link block py-3 text-center" data-key="navBlog">Blog</a></li>
                 </ul>
@@ -174,7 +174,6 @@
                 <div class="section-separator"></div>
             </section>
 
-            <!--
             <section id="projects" class="section w-full">
                 <div class="w-full max-w-7xl reveal">
                     <h2 class="text-4xl font-bold mb-12 text-center text-primary" data-key="projectsTitle">Projetos</h2>
@@ -182,25 +181,25 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="card rounded-lg overflow-hidden border group w-full max-w-md">
-                                    <img src="https://placehold.co/600x400/121212/00CFDD?text=Projeto+1" alt="Imagem do Projeto 1" class="w-full h-56 object-cover">
+                                    <img src="./images/autoflow-preview.png" alt="Imagem do Projeto 1" class="w-full h-56 object-cover">
                                     <div class="p-6">
                                         <div class="flex justify-between items-center mb-2">
-                                            <h3 class="text-2xl font-bold text-primary" data-key="project1Title">Nome do Projeto 1</h3>
-                                            <a href="https://github.com/seu-usuario/projeto-1" target="_blank" class="text-2xl text-secondary hover:text-accent" title="Ver no GitHub"><i class="fab fa-github"></i></a>
+                                            <h3 class="text-2xl font-bold text-primary" data-key="project1Title">AutoFlow - Automações</h3>
+                                            <a href="https://github.com/ymatharaujo/autoflow-vite" target="_blank" class="text-2xl text-secondary hover:text-accent" title="Ver no GitHub"><i class="fab fa-github"></i></a>
                                         </div>
-                                        <p class="text-secondary mb-4" data-key="project1Desc">Breve descrição do projeto, as tecnologias utilizadas e o desafio que ele resolveu.</p>
+                                        <p class="text-secondary mb-4" data-key="project1Desc">Vite, Javascript e Tailwind CSS</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="card rounded-lg overflow-hidden border group w-full max-w-md">
-                                    <img src="https://placehold.co/600x400/1E1E1E/00CFDD?text=Projeto+2" alt="Imagem do Projeto 2" class="w-full h-56 object-cover">
+                                    <img src="./images/code-scale-preview.png" alt="Imagem do Projeto 2" class="w-full h-56 object-cover">
                                     <div class="p-6">
                                         <div class="flex justify-between items-center mb-2">
-                                            <h3 class="text-2xl font-bold text-primary" data-key="project2Title">Nome do Projeto 2</h3>
-                                            <a href="https://github.com/seu-usuario/projeto-2" target="_blank" class="text-2xl text-secondary hover:text-accent" title="Ver no GitHub"><i class="fab fa-github"></i></a>
+                                            <h3 class="text-2xl font-bold text-primary" data-key="project2Title">CodeScale - Soluções</h3>
+                                            <a href="https://github.com/ymatharaujo/code-scale-landing-page" target="_blank" class="text-2xl text-secondary hover:text-accent" title="Ver no GitHub"><i class="fab fa-github"></i></a>
                                         </div>
-                                        <p class="text-secondary mb-4" data-key="project2Desc">Breve descrição do projeto, as tecnologias utilizadas e o desafio que ele resolveu.</p>
+                                        <p class="text-secondary mb-4" data-key="project2Desc">Vite, Javascript e Tailwind CSS</p>
                                     </div>
                                 </div>
                             </div>
@@ -212,7 +211,6 @@
                 </div>
                 <div class="section-separator"></div>
             </section>
-            -->
 
             <section id="contact" class="section">
                 <div class="max-w-2xl mx-auto text-center w-full reveal">
@@ -223,8 +221,8 @@
                     <div class="flex justify-center flex-wrap gap-6">
                         <a href="https://linkedin.com/in/seu-usuario" target="_blank" class="contact-link w-16 h-16 rounded-full flex items-center justify-center text-2xl text-secondary" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                         <a href="https://medium.com/@ymathsilvaa20/" target="_blank" class="contact-link w-16 h-16 rounded-full flex items-center justify-center text-2xl text-secondary" title="Medium"><i class="fab fa-medium"></i></a>
-                        <a href="https://wa.me/5511999999999" target="_blank" class="contact-link w-16 h-16 rounded-full flex items-center justify-center text-2xl text-secondary" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:seu-email@example.com" class="contact-link w-16 h-16 rounded-full flex items-center justify-center text-2xl text-secondary" title="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://wa.me/5516993335478" target="_blank" class="contact-link w-16 h-16 rounded-full flex items-center justify-center text-2xl text-secondary" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:ymathsilvaa20@gmail.com" class="contact-link w-16 h-16 rounded-full flex items-center justify-center text-2xl text-secondary" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </section>

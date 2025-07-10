@@ -1,3 +1,5 @@
+import './input.css';
+
 document.addEventListener('DOMContentLoaded', function () {
     const translations = {
         pt: {
@@ -25,10 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
             service4Title: "Desenvolvimento de SaaS",
             service4Desc: "Criação de plataformas Software as a Service escaláveis e multitenant.",
             projectsTitle: "Projetos",
-            project1Title: "Nome do Projeto 1",
-            project1Desc: "Breve descrição do projeto, as tecnologias utilizadas e o desafio que ele resolveu.",
-            project2Title: "Nome do Projeto 2",
-            project2Desc: "Breve descrição do projeto, as tecnologias utilizadas e o desafio que ele resolveu.",
+            project1Title: "AutoFlow - Automações",
+            project1Desc: "Vite, Javascript e Tailwind CSS",
+            project2Title: "CodeScale - Soluções",
+            project2Desc: "Vite, Javascript e Tailwind CSS",
             stackTitle: "Minha Stack",
             stackCat1: "Linguagens",
             stackCat2: "Bancos de Dados",
@@ -63,10 +65,10 @@ document.addEventListener('DOMContentLoaded', function () {
             service4Title: "SaaS Development",
             service4Desc: "Creation of scalable and multi-tenant Software as a Service platforms.",
             projectsTitle: "Projects",
-            project1Title: "Project Name 1",
-            project1Desc: "Brief description of the project, the technologies used, and the challenge it solved.",
-            project2Title: "Project Name 2",
-            project2Desc: "Brief description of the project, the technologies used, and the challenge it solved.",
+            project1Title: "AutoFlow - Automations",
+            project1Desc: "Vite, Javascript and Tailwind CSS",
+            project2Title: "CodeScale - Solutions",
+            project2Desc: "Vite, Javascript and Tailwind CSS",
             stackTitle: "My Stack",
             stackCat1: "Languages",
             stackCat2: "Databases",
